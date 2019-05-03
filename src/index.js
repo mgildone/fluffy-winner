@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Link } from "@reach/router"
 import './index.css';
-import App from './App';
+import App from './bitlifeclone/App';
 import * as serviceWorker from './serviceWorker';
 
 const Home = () => (
@@ -10,7 +10,8 @@ const Home = () => (
     <h1>Home</h1>
     <nav>
       <Link to="/">Home</Link> |{" "}
-      <Link to="dashboard">Dashboard</Link>
+      <Link to="dashboard">Dashboard</Link> |{" "}
+      <Link to="app">App</Link>
     </nav>
   </div>
 )
@@ -20,6 +21,7 @@ const Dash = () => <div>Dash</div>
 ReactDOM.render(<Router>
     <Home path="/" />
     <Dash path="dashboard" />
+    <App path="app" />
   </Router>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
