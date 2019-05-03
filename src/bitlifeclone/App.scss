@@ -16,9 +16,9 @@
     --primary--A200: #536DFE;
     --primary--A400: #3D5AFE;
     --primary--A700: #304FFE;
-    --primary: var(--primary--500);
-    --primary--dark: #002984;
-    --primary--light: #757de8;
+    --primary: #fedbd0;
+    --primary--dark: #442c2e;
+    --primary--light: #feeae6;
     --white: #fff;
     --black: #000;
 }
@@ -66,7 +66,7 @@ html {
 html,
 body {
     background-color: var(--white);
-    color: var(--black);
+    color: var(--primary--dark);
     font-family: 'Nunito', sans-serif;
 }
 
@@ -88,6 +88,7 @@ h3 {
     margin: 0;
     font-family: 'Pacifico', cursive;
     font-weight: 400;
+    color: var(--primary--light);
 }
 
 .app-header {
@@ -219,17 +220,24 @@ h3 {
 
 .c-card {
   background-color: #fff;
-  border-bottom: 2px solid var(--primary--100);
+  border-bottom: 2px solid var(--primary);
   margin: 0 -20px 30px -20px;
-  strong {
-      font-family: 'Pacifico', cursive;
-      font-weight: 400;
-  }
+}
+
+.c-card--colourfull {
+  background-color: var(--primary--light);
+}
+
+.c-card--colourfull-enhanced {
+    .c-card__header {
+        border-top: 1px solid var(--primary--dark);
+        border-bottom: 1px solid var(--primary--dark);
+    }
 }
 
 .c-card__header {
-  color: #000;
-  background-color: var(--primary--100);
+  color: var(--primary--dark);
+  background-color: var(--primary);
   padding: 10px;
   font-family: 'Pacifico', cursive;
 }

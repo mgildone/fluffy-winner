@@ -9,7 +9,7 @@ function App() {
       </header>
       <main class="u-container">
         <article class="c-card">
-            <header class="c-card__header"><time>2009</time></header>
+            <header class="c-card__header">Age: 15 years old</header>
             <ul class="c-card__feed u-clean-list">
                 <li class="c-card__event">
                 <i class="fas fa-music"></i> You started studying music.
@@ -17,7 +17,7 @@ function App() {
             </ul>
         </article>
         <article class="c-card">
-            <header class="c-card__header"><time>2010</time></header>
+            <header class="c-card__header">Age: 16 years old</header>
             <ul class="c-card__feed u-clean-list">
                 <li class="c-card__event">
                 <i class="fas fa-school"></i> You started going to school.
@@ -33,8 +33,8 @@ function App() {
                 </li>
             </ul>
         </article>
-        <article class="c-card">
-            <header class="c-card__header"><time>2011</time></header>
+        <article class="c-card c-card--colourfull">
+            <header class="c-card__header">Age: 17 years old</header>
             <ul class="c-card__feed u-clean-list">
                 <li class="c-card__event">
                 <i class="fas fa-paint-brush"></i> You started studying art.
@@ -47,8 +47,8 @@ function App() {
                 </li>
             </ul>
         </article>
-        <article class="c-card">
-            <header class="c-card__header"><time>2012</time></header>
+        <article class="c-card c-card--colourfull c-card--colourfull-enhanced">
+            <header class="c-card__header">Age: 18 years old</header>
             <ul class="c-card__feed u-clean-list">
                 <li class="c-card__event">
                 <i class="fab fa-itunes"></i><strong>Power Modestino</strong> has sold <strong>5 copies</strong>.
