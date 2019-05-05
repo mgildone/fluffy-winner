@@ -228,15 +228,6 @@ h3 {
   overflow: hidden;
 }
 
-.c-bar__value {
-  background-color: var(--primary--A700);
-  width: 0;
-  height: 5px;
-  border-radius: 3px;
-  overflow: hidden;
-  transition: width 2s ease-in-out 0.5s;
-}
-
 .c-button a {
   color: inherit;
 }

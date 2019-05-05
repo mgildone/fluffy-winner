@@ -1,22 +1,25 @@
 .c-character {
   dt {
-    display: inline-block;
     font-family: "Pacifico", cursive;
     font-weight: 400;
     margin-bottom: 3px;
     &::after {
       content: ":";
-      margin-right: 5px;
     }
   }
   dd {
-    display: inline-block;
     margin-left: 0;
     margin-bottom: 10px;
-    &::after {
-      content: ";";
-    }
   }
+}
+
+.c-bar__value {
+  background-color: var(--primary--dark);
+  width: 0;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: width 2s ease-in-out 0.5s;
 }
 
 .c-bar__value-1 {

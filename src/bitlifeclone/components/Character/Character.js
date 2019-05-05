@@ -23,21 +23,32 @@ const Character = props => {
         <dt>Sexual orientation</dt>
         <dd>{props.character.sexualOrientation}</dd>
       </div>
+      <hr />
       <div>
         <dt>Happiness</dt>
-        <dd>{props.character.happiness}</dd>
+        <dd>
+          <div
+            class={`c-bar__value c-bar__value-${props.character.happiness}`}
+          />
+        </dd>
       </div>
       <div>
         <dt>Health</dt>
-        <dd>{props.character.health}</dd>
+        <dd>
+          <div class={`c-bar__value c-bar__value-${props.character.health}`} />
+        </dd>
       </div>
       <div>
         <dt>Smarts</dt>
-        <dd>{props.character.smarts}</dd>
+        <dd>
+          <div class={`c-bar__value c-bar__value-${props.character.smarts}`} />
+        </dd>
       </div>
       <div>
         <dt>Look</dt>
-        <dd>{props.character.looks}</dd>
+        <dd>
+          <div class={`c-bar__value c-bar__value-${props.character.looks}`} />
+        </dd>
       </div>
     </dl>
   );
