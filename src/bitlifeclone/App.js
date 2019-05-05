@@ -20,7 +20,7 @@ function App() {
         <Nav onClick={addYear} />
       </header>
       <main className="u-container">
-        <Character character={character} />
+        <Character onCLick={setCharacter} character={character} />
         <CardList years={years} />
       </main>
     </div>
