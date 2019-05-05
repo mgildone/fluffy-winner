@@ -15,6 +15,14 @@ const Character = props => {
       <dd>{props.character.gender.name}</dd>
       <dt>Sexual orientation:</dt>
       <dd>{props.character.sexualOrientation}</dd>
+      <dt>Happiness</dt>
+      <dd>{props.character.happiness}</dd>
+      <dt>Health</dt>
+      <dd>{props.character.health}</dd>
+      <dt>Smarts</dt>
+      <dd>{props.character.smarts}</dd>
+      <dt>Look</dt>
+      <dd>{props.character.looks}</dd>
     </dl>
   );
 };

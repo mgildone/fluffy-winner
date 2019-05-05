@@ -1,4 +1,4 @@
-import { pick } from "./common";
+import { pick, randomScore } from "./common";
 
 const Player = (data = {}) => {
   const mandatoryKeys = [
@@ -28,7 +28,11 @@ const Player = (data = {}) => {
     gender,
     sexualOrientation,
     firstName,
-    lastName
+    lastName,
+    happiness: randomScore(1, 100),
+    health: randomScore(1, 100),
+    smarts: randomScore(1, 100),
+    looks: randomScore(1, 100)
   };
 };
 
