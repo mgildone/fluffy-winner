@@ -1,12 +1,21 @@
 .c-character {
   dt {
+    display: inline-block;
     font-family: "Pacifico", cursive;
     font-weight: 400;
     margin-bottom: 3px;
+    &::after {
+      content: ":";
+      margin-right: 5px;
+    }
   }
   dd {
+    display: inline-block;
     margin-left: 0;
     margin-bottom: 10px;
+    &::after {
+      content: ";";
+    }
   }
 }
 
