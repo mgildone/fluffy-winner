@@ -25,11 +25,7 @@ const Nav = props => {
         }
         <li className="c-nav-bar__item c-button c-nav-bar__item-priority  c-button--1-3">
           <button type="button" onClick={insertYear}>
-            <FontAwesomeIcon
-              icon={["far", "calendar-plus"]}
-              color="white"
-              size="2x"
-            />
+            <FontAwesomeIcon icon={["far", "calendar-plus"]} size="2x" />
           </button>
         </li>
         {

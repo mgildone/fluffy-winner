@@ -40,7 +40,7 @@ const Character = props => {
       </div>
       <div>
         <dt>
-          Health <FontAwesomeIcon icon={["far", "heartbeat"]} />
+          Health <FontAwesomeIcon icon={["fas", "heartbeat"]} />
         </dt>
         <dd>
           <div
@@ -49,7 +49,9 @@ const Character = props => {
         </dd>
       </div>
       <div>
-        <dt>Smarts</dt>
+        <dt>
+          Smarts <FontAwesomeIcon icon={["fas", "brain"]} />
+        </dt>
         <dd>
           <div
             className={`c-bar__value c-bar__value-${props.character.smarts}`}
@@ -57,7 +59,9 @@ const Character = props => {
         </dd>
       </div>
       <div>
-        <dt>Look</dt>
+        <dt>
+          Look <FontAwesomeIcon icon={["fas", "fire-alt"]} />
+        </dt>
         <dd>
           <div
             className={`c-bar__value c-bar__value-${props.character.looks}`}
