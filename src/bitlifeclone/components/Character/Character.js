@@ -33,9 +33,13 @@ const Character = props => {
           Happiness <FontAwesomeIcon icon={["far", "laugh-beam"]} />
         </dt>
         <dd>
-          <div
-            className={`c-bar__value c-bar__value-${props.character.happiness}`}
-          />
+          <div className={`c-bar__container`}>
+            <div
+              className={`c-bar__value c-bar__value-${
+                props.character.happiness
+              }`}
+            />
+          </div>
         </dd>
       </div>
       <div>
@@ -43,9 +47,11 @@ const Character = props => {
           Health <FontAwesomeIcon icon={["fas", "heartbeat"]} />
         </dt>
         <dd>
-          <div
-            className={`c-bar__value c-bar__value-${props.character.health}`}
-          />
+          <div className={`c-bar__container`}>
+            <div
+              className={`c-bar__value c-bar__value-${props.character.health}`}
+            />
+          </div>
         </dd>
       </div>
       <div>
@@ -53,9 +59,11 @@ const Character = props => {
           Smarts <FontAwesomeIcon icon={["fas", "brain"]} />
         </dt>
         <dd>
-          <div
-            className={`c-bar__value c-bar__value-${props.character.smarts}`}
-          />
+          <div className={`c-bar__container`}>
+            <div
+              className={`c-bar__value c-bar__value-${props.character.smarts}`}
+            />
+          </div>
         </dd>
       </div>
       <div>
@@ -63,9 +71,11 @@ const Character = props => {
           Look <FontAwesomeIcon icon={["fas", "fire-alt"]} />
         </dt>
         <dd>
-          <div
-            className={`c-bar__value c-bar__value-${props.character.looks}`}
-          />
+          <div className={`c-bar__container`}>
+            <div
+              className={`c-bar__value c-bar__value-${props.character.looks}`}
+            />
+          </div>
         </dd>
       </div>
     </dl>

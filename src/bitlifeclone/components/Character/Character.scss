@@ -10,6 +10,14 @@
   }
 }
 
+.c-bar__container {
+  background-color: var(--primary);
+  height: 5px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
 .c-bar__value {
   background-color: var(--primary--dark);
   width: 0;
