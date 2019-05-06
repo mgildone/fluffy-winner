@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import "./App.scss";
 import { GeneratePlayer } from "./utils/generatePlayer";
 
@@ -25,8 +25,18 @@ function App() {
         <Nav onClick={addYear} />
       </header>
       <main className="u-container">
-        <Character onCLick={setCharacter} character={character} />
-        <CardList years={years} />
+        {useMemo(
+          () => (
+            <Character onCLick={setCharacter} character={character} />
+          ),
+          [character]
+        )}
+        {useMemo(
+          () => (
+            <CardList years={years} />
+          ),
+          [years]
+        )}
       </main>
     </div>
   );
