@@ -2,6 +2,8 @@ import React from "react";
 
 import "./Character.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Character = props => {
   return (
     <dl className="c-character">
@@ -12,7 +14,9 @@ const Character = props => {
         </dd>
       </div>
       <div>
-        <dt>Nationality</dt>
+        <dt>
+          Nationality <FontAwesomeIcon icon={["far", "flag"]} />
+        </dt>
         <dd>{props.character.nationality.name}</dd>
       </div>
       <div>
@@ -25,29 +29,39 @@ const Character = props => {
       </div>
       <hr />
       <div>
-        <dt>Happiness</dt>
+        <dt>
+          Happiness <FontAwesomeIcon icon={["far", "laugh-beam"]} />
+        </dt>
         <dd>
           <div
-            class={`c-bar__value c-bar__value-${props.character.happiness}`}
+            className={`c-bar__value c-bar__value-${props.character.happiness}`}
           />
         </dd>
       </div>
       <div>
-        <dt>Health</dt>
+        <dt>
+          Health <FontAwesomeIcon icon={["far", "heartbeat"]} />
+        </dt>
         <dd>
-          <div class={`c-bar__value c-bar__value-${props.character.health}`} />
+          <div
+            className={`c-bar__value c-bar__value-${props.character.health}`}
+          />
         </dd>
       </div>
       <div>
         <dt>Smarts</dt>
         <dd>
-          <div class={`c-bar__value c-bar__value-${props.character.smarts}`} />
+          <div
+            className={`c-bar__value c-bar__value-${props.character.smarts}`}
+          />
         </dd>
       </div>
       <div>
         <dt>Look</dt>
         <dd>
-          <div class={`c-bar__value c-bar__value-${props.character.looks}`} />
+          <div
+            className={`c-bar__value c-bar__value-${props.character.looks}`}
+          />
         </dd>
       </div>
     </dl>

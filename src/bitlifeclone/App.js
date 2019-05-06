@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import "./App.scss";
 import { GeneratePlayer } from "./utils/generatePlayer";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "./components/Nav/Nav";
 import { CardList } from "./components/Card/CardList";
 import { Character } from "./components/Character/Character";
+
+library.add(far, fas);
 
 function App() {
   const [years, setYear] = useState([]);
