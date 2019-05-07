@@ -8,12 +8,14 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "./components/Nav/Nav";
 import { CardList } from "./components/Card/CardList";
 import { Character } from "./components/Character/Character";
+import { Offline } from "./components/Offline/Offline";
 
 library.add(far, fas);
 
 function App() {
   const [years, setYear] = useState([]);
   const [character, setCharacter] = useState(GeneratePlayer());
+  const [offline, setOffline] = useState(!navigator.onLine);
   const addYear = year => {
     setYear([...years, year]);
   };
@@ -24,6 +26,7 @@ function App() {
         <h1 className="logo">BitLife Clone</h1>
         <Nav onClick={addYear} />
       </header>
+      <Offline offline={offline} setOffline={setOffline} />
       <main className="u-container">
         {useMemo(
           () => (
