@@ -11,8 +11,9 @@
 }
 
 .c-bar__container {
+  margin-top: 10px;
   background-color: var(--primary);
-  height: 5px;
+  height: 15px;
   width: 100%;
   border-radius: 3px;
   overflow: hidden;
@@ -21,7 +22,7 @@
 .c-bar__value {
   background-color: var(--primary--dark);
   width: 0;
-  height: 5px;
+  height: 15px;
   border-radius: 3px;
   overflow: hidden;
   transition: width 2s ease-in-out 0.5s;

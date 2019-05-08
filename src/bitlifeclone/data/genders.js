@@ -3,6 +3,7 @@ export default [
   { name: "Female", abbreviation: "F" },
   { name: "Agender", abbreviation: "M" },
   { name: "Genderqueer", abbreviation: "M" },
+  { name: "Trans", abbreviation: "M" },
   { name: "Trans", abbreviation: "F" },
   { name: "Pangender", abbreviation: "M" },
   { name: "Bigender", abbreviation: "M" },

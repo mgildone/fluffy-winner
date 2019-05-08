@@ -1,1 +1,1 @@
-export default ["Straight", "Homosexual"];
+export default ["Straight", "Homosexual", "Bisexual", "Asexual"];

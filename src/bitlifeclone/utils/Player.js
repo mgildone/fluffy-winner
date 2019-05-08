@@ -1,16 +1,20 @@
 import { pick, randomScore } from "./common";
 
-const Player = (data = {}) => {
-  const mandatoryKeys = [
+const validate = (data) => {
+    const mandatoryKeys = [
     "firstNames",
     "lastNames",
     "nationalities",
     "genders",
     "sexualOrientations"
   ];
-  const errors = mandatoryKeys.reduce((acc, key) => {
+  return mandatoryKeys.reduce((acc, key) => {
     return data[key] ? acc : acc.concat(key);
   }, []);
+};
+
+const Player = (data = {}) => {
+  const errors = validate(data);
   if (errors.length) {
     throw new Error(`${errors.join(",")} are missing!`);
   }
