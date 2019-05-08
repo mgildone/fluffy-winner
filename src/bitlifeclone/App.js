@@ -26,7 +26,12 @@ function App() {
         <h1 className="logo">BitLife Clone</h1>
         <Nav onClick={addYear} />
       </header>
-      <Offline offline={offline} setOffline={setOffline} />
+      {useMemo(
+          () => (
+            <Offline offline={offline} setOffline={setOffline} />
+          ),
+          [offline]
+        )}
       <main className="u-container">
         {useMemo(
           () => (
