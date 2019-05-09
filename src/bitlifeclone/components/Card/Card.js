@@ -7,7 +7,7 @@ import { CardEventList } from "./CardEventList";
 const Card = props => {
   return (
     <article className="c-card">
-      <header className="c-card__header">Age: {props.age} years old</header>
+      <header className="c-card__header">Age: {props.age} {props.age > 1 ? "years" : "year" } old</header>
       <CardEventList events={props.events} />
     </article>
   );

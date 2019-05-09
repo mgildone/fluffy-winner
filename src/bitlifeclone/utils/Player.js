@@ -28,6 +28,8 @@ const Player = (data = {}) => {
   const lastName = pick(data["lastNames"][nationality.abbreviation]);
 
   return {
+    age: 0,
+    lifePhase: "infant",
     nationality,
     gender,
     sexualOrientation,

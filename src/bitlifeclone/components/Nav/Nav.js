@@ -6,7 +6,7 @@ const Nav = props => {
   const insertYear = e => {
     e.preventDefault();
     props.onClick({
-      age: 45,
+      age: props.age,
       events: [
         "You started going to school.",
         "You graduated.",

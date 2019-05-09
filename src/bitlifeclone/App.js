@@ -7,7 +7,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "./components/Nav/Nav";
 import { CardList } from "./components/Card/CardList";
-import { Character } from "./components/Character/Character";
+import { CharacterSummary } from "./components/Character/CharacterSummary";
 import { Offline } from "./components/Offline/Offline";
 
 library.add(far, fas);
@@ -17,7 +17,9 @@ function App() {
   const [character, setCharacter] = useState(GeneratePlayer());
   const [offline, setOffline] = useState(!navigator.onLine);
   const addYear = year => {
-    setYear([...years, year]);
+    const age = character.age + 1;
+    setCharacter(Object.assign({}, character, { age }));
+    setYear([...years, Object.assign({}, year, { age })]);
   };
 
   return (
@@ -35,7 +37,7 @@ function App() {
       <main className="u-container">
         {useMemo(
           () => (
-            <Character onCLick={setCharacter} character={character} />
+            <CharacterSummary character={character} />
           ),
           [character]
         )}

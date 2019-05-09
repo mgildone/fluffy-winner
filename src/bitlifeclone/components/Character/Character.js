@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Character.scss";
 
@@ -6,12 +6,13 @@ import { CharacterBar } from "./CharacterBar";
 import { CharacterField } from "./CharacterField";
 
 const CharacterContainer = (props) => {
+    const [isOpen, setIsOpen] = useState(false);
     return <dl className="c-character" {...props} />
 }
 
 const Character = props => {
   return (
-    <CharacterContainer id="ca">
+    <CharacterContainer>
         <CharacterField label={"Name"} value={`${props.character.firstName} ${props.character.lastName}`} />
         <CharacterField label={"Nationality"} value={props.character.nationality.name} icon={["far", "flag"]} />
         <CharacterField label={"Gender"} value={props.character.gender.name} />
