@@ -5,6 +5,7 @@ const validate = (data) => {
     "firstNames",
     "lastNames",
     "nationalities",
+    "countries",
     "genders",
     "sexualOrientations"
   ];
@@ -20,6 +21,7 @@ const Player = (data = {}) => {
   }
 
   const nationality = pick(data["nationalities"]);
+  const country = pick(data["countries"]);
   const gender = pick(data["genders"]);
   const sexualOrientation = pick(data["sexualOrientations"]);
   const firstName = pick(
@@ -31,6 +33,7 @@ const Player = (data = {}) => {
     age: 0,
     lifePhase: "infant",
     nationality,
+    country,
     gender,
     sexualOrientation,
     firstName,

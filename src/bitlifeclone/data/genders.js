@@ -1,12 +1,12 @@
 export default [
-  { name: "Male", abbreviation: "M" },
-  { name: "Female", abbreviation: "F" },
-  { name: "Agender", abbreviation: "M" },
-  { name: "Genderqueer", abbreviation: "M" },
-  { name: "Trans", abbreviation: "M" },
-  { name: "Trans", abbreviation: "F" },
-  { name: "Pangender", abbreviation: "M" },
-  { name: "Bigender", abbreviation: "M" },
-  { name: "Genderfluid", abbreviation: "M" },
-  { name: "Intersex", abbreviation: "M" }
+  { name: "Male", abbreviation: "M", icon: ["fas", "mars"] },
+  { name: "Female", abbreviation: "F", icon: ["fas", "venus"] },
+  { name: "Agender", abbreviation: "M", icon: ["fas", "genderless"] },
+//   { name: "Genderqueer", abbreviation: "M", icon: ["fas", "genderless"] },
+  { name: "Trans", abbreviation: "M", icon: ["fas", "transgender"] },
+  { name: "Trans", abbreviation: "F", icon: ["fas", "transgender"] },
+//   { name: "Pangender", abbreviation: "M", icon: ["fas", "genderless"] },
+//   { name: "Bigender", abbreviation: "M", icon: ["fas", "genderless"] },
+//   { name: "Genderfluid", abbreviation: "M", icon: ["fas", "genderless"] },
+//   { name: "Intersex", abbreviation: "M", icon: ["fas", "genderless"] }
 ];
