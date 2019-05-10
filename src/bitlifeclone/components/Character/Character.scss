@@ -14,11 +14,22 @@
 .c-character-summary {
   background-color: var(--white);
   margin: calc(#{get-spacing("xs")} * -1) calc(#{get-spacing("xs")} * -1) get-spacing("lg") calc(#{get-spacing("xs")} * -1);
-  padding: 10px;
+  padding: get-spacing("xs");
   border-bottom: 2px solid var(--primary);
   h1 {
       margin: 0;
   }
+}
+
+.c-character-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(var(--primary--dark), 1);
+    padding: get-spacing("xs");
+    z-index: 10;
 }
 
 .c-bar__container {

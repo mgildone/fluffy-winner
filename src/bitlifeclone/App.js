@@ -8,6 +8,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "./components/Nav/Nav";
 import { CardList } from "./components/Card/CardList";
 import { CharacterSummary } from "./components/Character/CharacterSummary";
+import { CharacterModal } from "./components/Character/CharacterModal";
 import { Offline } from "./components/Offline/Offline";
 
 library.add(far, fas);
@@ -34,14 +35,9 @@ function App() {
             <Offline offline={offline} setOffline={setOffline} />
           ),
           [offline]
-        )}
+      )}
       <main className="u-container">
-        {useMemo(
-          () => (
-            <CharacterSummary character={character} />
-          ),
-          [character]
-        )}
+        { character.newCharacter ? <CharacterModal character={character} /> : <CharacterSummary character={character} /> }
         {useMemo(
           () => (
             <CardList years={years} />
