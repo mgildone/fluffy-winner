@@ -35,6 +35,9 @@
   a {
     text-decoration: none;
   }
+  :focus {
+      outline: none;
+  }
 }
 
 .c-nav-bar__item-priority-top {
