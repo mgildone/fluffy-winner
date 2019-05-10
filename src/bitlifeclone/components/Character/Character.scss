@@ -1,4 +1,20 @@
 @import "../../Core";
+
+.c-bnt {
+    display: block;
+    padding: get-spacing("xs");
+    margin-top: get-spacing("lg");
+    margin-bottom: get-spacing("xs");
+    color: var(--primary--light);
+    background-color: var(--primary--dark);
+    border-color: transparent;
+    text-align: center;
+    width: 100%;
+    :focus {
+        outline: none
+    }
+}
+
 .c-character {
   dt {
     font-family: "Pacifico", cursive;
@@ -27,9 +43,24 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(var(--primary--dark), 1);
+    background-color: rgba(get-rgb($primary--dark), 0.5);
     padding: get-spacing("xs");
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-family: "Pacifico", cursive;
+        text-align: center;
+        margin-top: get-spacing(0);
+        margin-bottom: get-spacing("sm");
+    }
+}
+
+.c-character-modal__info {
+    background-color: var(--primary--light);
+    padding: get-spacing("xs");
+    width: 100%;
 }
 
 .c-bar__container {

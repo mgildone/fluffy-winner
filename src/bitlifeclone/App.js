@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import "./App.scss";
 import { GeneratePlayer } from "./utils/generatePlayer";
 
@@ -21,8 +21,11 @@ function App() {
     const age = character.age + 1;
     setCharacter(Object.assign({}, character, { age }));
     setYear([...years, Object.assign({}, year, { age })]);
-    document.querySelector("main.u-container").lastChild.scrollIntoView({behavior: "smooth"});
   };
+
+  useEffect(() => {
+      document.querySelector("main.u-container").lastChild.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+  }, [years]);
 
   return (
     <div className="app">
@@ -37,7 +40,7 @@ function App() {
           [offline]
       )}
       <main className="u-container">
-        { character.newCharacter ? <CharacterModal character={character} /> : <CharacterSummary character={character} /> }
+        { character.newCharacter ? <CharacterModal setCharacter={setCharacter} character={character} /> : <CharacterSummary character={character} /> }
         {useMemo(
           () => (
             <CardList years={years} />

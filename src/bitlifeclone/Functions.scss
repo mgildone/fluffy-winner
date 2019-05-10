@@ -24,3 +24,12 @@
 
     @return $list;
 }
+
+@function get-rgb($color) {
+    @debug($color);
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+
+    @return rgb($red, $green, $blue);
+}
