@@ -20,11 +20,12 @@ function App() {
     const age = character.age + 1;
     setCharacter(Object.assign({}, character, { age }));
     setYear([...years, Object.assign({}, year, { age })]);
+    document.querySelector("main.u-container").lastChild.scrollIntoView({behavior: "smooth"});
   };
 
   return (
     <div className="app">
-      <header className=".c-header app-header">
+      <header className="app-header">
         <h1 className="logo">BitLife Clone</h1>
         <Nav onClick={addYear} />
       </header>

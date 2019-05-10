@@ -1,0 +1,58 @@
+:root {
+  --primary--50: #e8eaf6;
+  --primary--100: #c5cae9;
+  --primary--200: #9fa8da;
+  --primary--300: #7986cb;
+  --primary--400: #5c6bc0;
+  --primary--500: #3f51b5;
+  --primary--600: #3949ab;
+  --primary--700: #303f9f;
+  --primary--800: #283593;
+  --primary--900: #1a237e;
+  --primary--A100: #8c9eff;
+  --primary--A200: #536dfe;
+  --primary--A400: #3d5afe;
+  --primary--A700: #304ffe;
+  --primary: #fedbd0;
+  --primary--dark: #442c2e;
+  --primary--light: #feeae6;
+  --white: #fff;
+  --black: #000;
+}
+
+$font-family-primary: "Nunito", sans-serif;
+$font-family-secondary: "Pacifico", cursive;
+
+$font-size-xxs: 10px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 17px;
+$font-size-lg: 24px;
+$font-size-xl: 26px;
+$font-size-xxl: 28px;
+
+$font-weight: (
+    normal: 400,
+    bold: 700,
+);
+
+$golden-ration: 1.61803398875;
+$line-height-base: 1;
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+
+$spacing: (
+    0: 0,
+    'xxs': 5,
+    'xs': 10,
+    'sm': 15,
+    'md': 25,
+    'lg': 35,
+    'xl': 50,
+    'xxl': 60
+);

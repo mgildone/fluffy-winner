@@ -1,18 +1,19 @@
+@import "../../Core";
 .c-character {
   dt {
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    margin-bottom: 3px;
+    margin-bottom: get-spacing("xxs");
   }
   dd {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: get-spacing("xs");
   }
 }
 
 .c-character-summary {
   background-color: var(--white);
-  margin: -20px -20px 20px -20px;
+  margin: calc(#{get-spacing("xs")} * -1) calc(#{get-spacing("xs")} * -1) get-spacing("lg") calc(#{get-spacing("xs")} * -1);
   padding: 10px;
   border-bottom: 2px solid var(--primary);
   h1 {
@@ -21,19 +22,19 @@
 }
 
 .c-bar__container {
-  margin-top: 10px;
+  margin-top: get-spacing("xs");
   background-color: var(--primary);
-  height: 15px;
+  height: get-spacing("xs");
   width: 100%;
-  border-radius: 3px;
+  border-radius: get-spacing("xxs");
   overflow: hidden;
 }
 
 .c-bar__value {
   background-color: var(--primary--dark);
   width: 0;
-  height: 15px;
-  border-radius: 3px;
+  height: get-spacing("xs");
+  border-radius: get-spacing("xxs");
   overflow: hidden;
   transition: width 2s ease-in-out 0.5s;
 }

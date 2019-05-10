@@ -1,7 +1,9 @@
+@import "../../Core";
+
 .c-card {
   background-color: #fff;
   border-bottom: 2px solid var(--primary);
-  margin: 0 -20px 30px -20px;
+  margin: 0 calc(#{get-spacing("xs")} * -1) get-spacing("sm") calc(#{get-spacing("xs")} * -1);
 }
 
 .c-card--colourfull {
@@ -18,15 +20,15 @@
 .c-card__header {
   color: var(--primary--dark);
   background-color: var(--primary);
-  padding: 10px;
+  padding: get-spacing("sm");
   font-family: 'Pacifico', cursive;
 }
 
 .c-card__feed {
-  margin: 10px; 
+  margin: get-spacing("sm");
 }
 
 .c-card__event {
-  margin-bottom: 10px; 
+  margin-bottom: get-spacing("sm");
 }
 
