@@ -5,7 +5,7 @@ const CharacterBar = props => {
     return (
         <div>
         <dt>
-          {props.label} <FontAwesomeIcon icon={props.icon} />
+          {props.label} <FontAwesomeIcon className="c-icon" icon={props.icon} />
         </dt>
         <dd>
           <div className={`c-bar__container`}>

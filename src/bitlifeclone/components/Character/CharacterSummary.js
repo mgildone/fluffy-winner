@@ -10,11 +10,10 @@ const CharacterSummary = props => {
       <React.Fragment>
         {useMemo(() => (
             <div className="c-character-summary">
-                <h1>{ props.character.firstName } { props.character.lastName } <FlagIcon code={props.character.country.abbreviation} /></h1>
+                <h1>{ props.character.firstName } { props.character.lastName } <FlagIcon className="c-icon" code={props.character.country.abbreviation} /></h1>
                 <small>
-                    { props.character.age } years old, { props.character.lifePhase },
-                    <FontAwesomeIcon icon={ props.character.gender.icon } />
-                    <FontAwesomeIcon icon={ props.character.sexualOrientation.icon } />
+                    { props.character.age } years old
+                    <FontAwesomeIcon className="c-icon" icon={ props.character.gender.icon } />
                 </small>
             </div>
         ),

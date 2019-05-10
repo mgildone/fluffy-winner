@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Character.js renders full component 1`] = `
+exports[`CharacterField.js renders full component 1`] = `
 <DocumentFragment>
   <div>
     <dt>
@@ -10,7 +10,7 @@ exports[`Character.js renders full component 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="svg-inline--fa fa-flag fa-w-16 "
+          class="svg-inline--fa fa-flag fa-w-16 c-icon"
           data-icon="flag"
           data-prefix="far"
           focusable="false"

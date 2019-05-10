@@ -14,7 +14,7 @@ const Offline = props => {
             window.removeEventListener('offline', setOfflineStatus);
         }
     });
-    return (props.offline ? <div className="c-offline"><FontAwesomeIcon icon={["fas", "wifi"]} /> Offline</div> : null);
+    return (props.offline ? <div className="c-offline"><FontAwesomeIcon className="c-icon" icon={["fas", "wifi"]} /> Offline</div> : null);
 };
 
 export { Offline };

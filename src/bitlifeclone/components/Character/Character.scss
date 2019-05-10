@@ -3,16 +3,23 @@
 .c-bnt {
     display: block;
     padding: get-spacing("xs");
-    margin-top: get-spacing("lg");
+    margin-top: get-spacing("xs");
     margin-bottom: get-spacing("xs");
     color: var(--primary--light);
     background-color: var(--primary--dark);
     border-color: transparent;
     text-align: center;
     width: 100%;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
     :focus {
         outline: none
     }
+}
+
+.c-bnt--negative {
+    color: var(--primary--dark);
+    background-color: var(--primary--light);
+    border-color: var(--primary--dark);
 }
 
 .c-character {
@@ -61,6 +68,12 @@
     background-color: var(--primary--light);
     padding: get-spacing("xs");
     width: 100%;
+}
+
+.c-icon {
+    vertical-align: middle;
+    margin-left: get-spacing("xxs");
+    margin-right: get-spacing("xxs");
 }
 
 .c-bar__container {

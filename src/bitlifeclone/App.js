@@ -24,7 +24,10 @@ function App() {
   };
 
   useEffect(() => {
-      document.querySelector("main.u-container").lastChild.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+      const yearsList = document.querySelector("main.u-container");
+      if(yearsList) {
+          yearsList.lastChild.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+      }
   }, [years]);
 
   return (

@@ -16,13 +16,11 @@ const CharacterModal = props => {
             <div className="c-character-modal">
                 <div className="c-character-modal__info">
                     <h1>Welcome!</h1>
-                    <div>{ props.character.firstName } { props.character.lastName } <FlagIcon code={props.character.country.abbreviation} /></div>
-                    <small>
-                        { props.character.age } years old, { props.character.lifePhase },
-                        <FontAwesomeIcon icon={ props.character.gender.icon } />
-                        <FontAwesomeIcon icon={ props.character.sexualOrientation.icon } />
-                    </small>
+                    <div>You are born  { props.character.gender.name } <FontAwesomeIcon className="c-icon" icon={ props.character.gender.icon } /> in {props.character.country.name} <FlagIcon className="c-icon" code={props.character.country.abbreviation} /></div>
+                    <div>Your name is { props.character.firstName } { props.character.lastName }</div>
                     <button className="c-bnt" type="button" onClick={startGame}>Play!</button>
+                    <hr />
+                    <button className="c-bnt c-bnt--negative" type="button" onClick={startGame}>I want to reborn!</button>
                 </div>
             </div>
         ),
