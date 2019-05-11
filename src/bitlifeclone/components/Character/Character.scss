@@ -1,28 +1,37 @@
 @import "../../Core";
 
 .c-bnt {
-    display: block;
-    padding: get-spacing("xs");
-    margin-top: get-spacing("xs");
-    margin-bottom: get-spacing("xs");
-    color: var(--primary--light);
-    background-color: var(--primary--dark);
-    border-color: transparent;
-    text-align: center;
-    width: 100%;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
-    :focus {
-        outline: none
-    }
+  display: block;
+  padding: get-spacing("xs");
+  margin-top: get-spacing("xs");
+  margin-bottom: get-spacing("xs");
+  color: var(--primary--light);
+  background-color: var(--primary--dark);
+  border-color: transparent;
+  text-align: center;
+  width: 100%;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  :focus {
+    outline: none;
+  }
 }
 
 .c-bnt--negative {
-    color: var(--primary--dark);
-    background-color: var(--primary--light);
-    border-color: var(--primary--dark);
+  color: var(--primary--dark);
+  background-color: var(--primary--light);
+  border-color: var(--primary--dark);
 }
 
 .c-character {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(get-rgb($primary--dark), 0.5);
+  padding-left: get-spacing("xl");
+  margin: get-spacing(0);
+  z-index: 11;
   dt {
     font-family: "Pacifico", cursive;
     font-weight: 400;
@@ -34,46 +43,54 @@
   }
 }
 
+.c-character__list {
+  background-color: var(--primary--light);
+  padding: get-spacing("sm");
+  margin: get-spacing(0);
+  height: 100%;
+}
+
 .c-character-summary {
   background-color: var(--white);
-  margin: calc(#{get-spacing("xs")} * -1) calc(#{get-spacing("xs")} * -1) get-spacing("lg") calc(#{get-spacing("xs")} * -1);
+  margin: calc(#{get-spacing("xs")} * -1) calc(#{get-spacing("xs")} * -1)
+    get-spacing("lg") calc(#{get-spacing("xs")} * -1);
   padding: get-spacing("xs");
   border-bottom: 2px solid var(--primary);
   h1 {
-      margin: 0;
+    margin: 0;
   }
 }
 
 .c-character-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(get-rgb($primary--dark), 0.5);
-    padding: get-spacing("xs");
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-        font-family: "Pacifico", cursive;
-        text-align: center;
-        margin-top: get-spacing(0);
-        margin-bottom: get-spacing("sm");
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(get-rgb($primary--dark), 0.5);
+  padding: get-spacing("xs");
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    margin-top: get-spacing(0);
+    margin-bottom: get-spacing("sm");
+  }
 }
 
 .c-character-modal__info {
-    background-color: var(--primary--light);
-    padding: get-spacing("xs");
-    width: 100%;
+  background-color: var(--primary--light);
+  padding: get-spacing("xs");
+  width: 100%;
 }
 
 .c-icon {
-    vertical-align: middle;
-    margin-left: get-spacing("xxs");
-    margin-right: get-spacing("xxs");
+  vertical-align: middle;
+  margin-left: get-spacing("xxs");
+  margin-right: get-spacing("xxs");
 }
 
 .c-bar__container {

@@ -1,27 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./Character.scss";
 
 import { CharacterBar } from "./CharacterBar";
 import { CharacterField } from "./CharacterField";
 
-const CharacterContainer = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    return <dl className="c-character" {...props} />
-}
+const CharacterContainer = props => {
+  return <div className="c-character" {...props} />;
+};
+
+const CharacterList = props => {
+  return <dl className="c-character__list" {...props} />;
+};
 
 const Character = props => {
+  console.log(JSON.stringify(props.character, null, 2));
   return (
     <CharacterContainer>
-        <CharacterField label={"Name"} value={`${props.character.firstName} ${props.character.lastName}`} />
-        <CharacterField label={"Nationality"} value={props.character.nationality.name} icon={["far", "flag"]} />
-        <CharacterField label={"Gender"} value={props.character.gender.name} />
-        <CharacterField label={"Sexual orientation"} value={props.character.sexualOrientation} />
+      <CharacterList>
+        <CharacterField
+          label={"Name"}
+          result={`${props.character.firstName} ${props.character.lastName}`}
+        />
+        <CharacterField
+          label={"Nationality"}
+          result={props.character.nationality.name}
+          icon={["far", "flag"]}
+        />
+        <CharacterField label={"Gender"} result={props.character.gender.name} />
+        <CharacterField
+          label={"Sexual orientation"}
+          result={props.character.sexualOrientation.name}
+        />
         <hr />
-        <CharacterBar label={"Happiness"} value={props.character.happiness} icon={["far", "laugh-beam"]} />
-        <CharacterBar label={"Health"} value={props.character.health} icon={["fas", "heartbeat"]} />
-        <CharacterBar label={"Smarts"} value={props.character.smarts} icon={["fas", "brain"]} />
-        <CharacterBar label={"Looks"} value={props.character.looks} icon={["fas", "fire-alt"]} />
+        <CharacterBar
+          label={"Happiness"}
+          result={props.character.happiness}
+          icon={["far", "laugh-beam"]}
+        />
+        <CharacterBar
+          label={"Health"}
+          result={props.character.health}
+          icon={["fas", "heartbeat"]}
+        />
+        <CharacterBar
+          label={"Smarts"}
+          result={props.character.smarts}
+          icon={["fas", "brain"]}
+        />
+        <CharacterBar
+          label={"Looks"}
+          result={props.character.looks}
+          icon={["fas", "fire-alt"]}
+        />
+      </CharacterList>
     </CharacterContainer>
   );
 };

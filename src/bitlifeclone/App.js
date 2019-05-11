@@ -24,10 +24,14 @@ function App() {
   };
 
   useEffect(() => {
-      const yearsList = document.querySelector("main.u-container");
-      if(yearsList) {
-          yearsList.lastChild.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-      }
+    const yearsList = document.querySelector("main.u-container");
+    if (yearsList) {
+      yearsList.lastChild.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    }
   }, [years]);
 
   return (
@@ -37,13 +41,17 @@ function App() {
         <Nav onClick={addYear} />
       </header>
       {useMemo(
-          () => (
-            <Offline offline={offline} setOffline={setOffline} />
-          ),
-          [offline]
+        () => (
+          <Offline offline={offline} setOffline={setOffline} />
+        ),
+        [offline]
       )}
       <main className="u-container">
-        { character.newCharacter ? <CharacterModal setCharacter={setCharacter} character={character} /> : <CharacterSummary character={character} /> }
+        {character.newCharacter ? (
+          <CharacterModal setCharacter={setCharacter} character={character} />
+        ) : (
+          <CharacterSummary character={character} />
+        )}
         {useMemo(
           () => (
             <CardList years={years} />
