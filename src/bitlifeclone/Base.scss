@@ -53,11 +53,16 @@ h3 {
   font-weight: 400;
   color: var(--primary--light);
 }
-
 .app-header {
-  padding: get-spacing("xs");
-  background-color: var(--primary--dark);
-  color: var(--primary--50);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  header {
+    padding: get-spacing("xs");
+    background-color: var(--primary--dark);
+    color: var(--primary--light);
+  }
 }
 
 .u-container {

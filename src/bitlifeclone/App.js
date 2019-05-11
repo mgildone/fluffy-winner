@@ -36,10 +36,15 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1 className="logo">BitLife Clone</h1>
-        <Nav onClick={addYear} />
-      </header>
+      <div className="app-header">
+        <header>
+          <h1 className="logo">BitLife Clone</h1>
+          <Nav onClick={addYear} />
+        </header>
+        {!character.newCharacter ? (
+          <CharacterSummary character={character} />
+        ) : null}
+      </div>
       {useMemo(
         () => (
           <Offline offline={offline} setOffline={setOffline} />
@@ -49,9 +54,7 @@ function App() {
       <main className="u-container">
         {character.newCharacter ? (
           <CharacterModal setCharacter={setCharacter} character={character} />
-        ) : (
-          <CharacterSummary character={character} />
-        )}
+        ) : null}
         {useMemo(
           () => (
             <CardList years={years} />

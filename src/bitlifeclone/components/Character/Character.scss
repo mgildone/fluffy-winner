@@ -52,8 +52,6 @@
 
 .c-character-summary {
   background-color: var(--white);
-  margin: calc(#{get-spacing("xs")} * -1) calc(#{get-spacing("xs")} * -1)
-    get-spacing("lg") calc(#{get-spacing("xs")} * -1);
   padding: get-spacing("xs");
   border-bottom: 2px solid var(--primary);
   h1 {

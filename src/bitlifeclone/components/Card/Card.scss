@@ -3,7 +3,8 @@
 .c-card {
   background-color: #fff;
   border-bottom: 2px solid var(--primary);
-  margin: 0 calc(#{get-spacing("xs")} * -1) get-spacing("sm") calc(#{get-spacing("xs")} * -1);
+  margin: 0 calc(#{get-spacing("xs")} * -1) get-spacing("sm")
+    calc(#{get-spacing("xs")} * -1);
 }
 
 .c-card--colourfull {
@@ -11,17 +12,17 @@
 }
 
 .c-card--colourfull-enhanced {
-    .c-card__header {
-        border-top: 1px solid var(--primary--dark);
-        border-bottom: 1px solid var(--primary--dark);
-    }
+  .c-card__header {
+    border-top: 1px solid var(--primary--dark);
+    border-bottom: 1px solid var(--primary--dark);
+  }
 }
 
 .c-card__header {
   color: var(--primary--dark);
   background-color: var(--primary);
   padding: get-spacing("sm");
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .c-card__feed {
@@ -32,3 +33,6 @@
   margin-bottom: get-spacing("sm");
 }
 
+.c-year-list {
+  margin-top: get-spacing("huge");
+}
