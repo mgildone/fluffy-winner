@@ -6,10 +6,12 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "./components/Nav/Nav";
-import { CardList } from "./components/Card/CardList";
 import { CharacterSummary } from "./components/Character/CharacterSummary";
-import { CharacterModal } from "./components/Character/CharacterModal";
 import { Offline } from "./components/Offline/Offline";
+import { Router } from "@reach/router";
+import { Homepage } from "./pages/Homepage";
+import { Progress } from "./pages/Progress";
+import { Profile } from "./pages/Profile";
 
 library.add(far, fas);
 
@@ -34,6 +36,9 @@ function App() {
     }
   }, [years]);
 
+  useEffect(() => {
+    console.log(JSON.stringify(character, null, 2));
+  });
   return (
     <div className="app">
       <div className="app-header">
@@ -52,15 +57,19 @@ function App() {
         [offline]
       )}
       <main className="u-container">
-        {character.newCharacter ? (
-          <CharacterModal setCharacter={setCharacter} character={character} />
-        ) : null}
-        {useMemo(
-          () => (
-            <CardList years={years} />
-          ),
-          [years]
-        )}
+        <Router>
+          <Homepage
+            path="/"
+            setCharacter={setCharacter}
+            character={character}
+          />
+          <Progress path="/progress" years={years} />
+          <Profile
+            path="/profile"
+            setCharacter={setCharacter}
+            character={character}
+          />
+        </Router>
       </main>
     </div>
   );
