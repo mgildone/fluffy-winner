@@ -10,7 +10,6 @@ export function randomScore(low, high) {
 }
 
 export function generateChances(arr) {
-    console.log(arr);
     if (arr.length === 0) {
         throw new Error("Cannot generateChances() from an empty array");
     }

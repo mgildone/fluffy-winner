@@ -5,15 +5,7 @@ import "./Nav.scss";
 const Nav = props => {
   const insertYear = e => {
     e.preventDefault();
-    props.onClick({
-      age: props.age,
-      events: [
-        "You started going to school.",
-        "You graduated.",
-        "You released Modestino Power and sold 10 copies.",
-        "Modestino Power has sold 10 copies."
-      ]
-    });
+    props.onClick();
   };
   return (
     <nav className="c-nav-bar c-nav-bar--bottom u-container--wide">
@@ -25,7 +17,11 @@ const Nav = props => {
         }
         <li className="c-nav-bar__item c-button c-nav-bar__item-priority  c-button--1-3">
           <button type="button" onClick={insertYear}>
-            <FontAwesomeIcon className="c-icon" icon={["far", "calendar-plus"]} size="2x" />
+            <FontAwesomeIcon
+              className="c-icon"
+              icon={["far", "calendar-plus"]}
+              size="2x"
+            />
           </button>
         </li>
         {

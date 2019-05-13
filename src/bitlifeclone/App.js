@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "./App.scss";
 import { GeneratePlayer } from "./utils/generatePlayer";
+import { pickChances } from "./utils/common";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
@@ -19,10 +20,17 @@ function App() {
   const [years, setYear] = useState([]);
   const [character, setCharacter] = useState(GeneratePlayer());
   const [offline, setOffline] = useState(!navigator.onLine);
-  const addYear = year => {
+  const addYear = () => {
+    const bullyEvent = () => {
+      const bullied = pickChances(character.bullied).value;
+      if (bullied) {
+        return "You've been bullied!";
+      }
+      return "You've not been bullied!";
+    };
     const age = character.age + 1;
     setCharacter(Object.assign({}, character, { age }));
-    setYear([...years, Object.assign({}, year, { age })]);
+    setYear([...years, Object.assign({}, { age, events: [bullyEvent()] })]);
   };
 
   useEffect(() => {
