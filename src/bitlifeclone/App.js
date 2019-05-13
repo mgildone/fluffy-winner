@@ -39,6 +39,7 @@ function App() {
   useEffect(() => {
     console.log(JSON.stringify(character, null, 2));
   });
+
   return (
     <div className="app">
       <div className="app-header">
@@ -47,11 +48,11 @@ function App() {
           <Nav onClick={addYear} />
         </header>
         {useMemo(
-                () => (
-                <Offline offline={offline} setOffline={setOffline} />
-                ),
-                [offline]
-            )}
+          () => (
+            <Offline offline={offline} setOffline={setOffline} />
+          ),
+          [offline]
+        )}
         {!character.newCharacter ? (
           <CharacterSummary character={character} />
         ) : null}

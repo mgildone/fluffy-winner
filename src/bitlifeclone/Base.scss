@@ -47,6 +47,7 @@ h3 {
 }
 
 a {
+    @include base-link;  
     @include inherited;
     @include unvisited;
 }
