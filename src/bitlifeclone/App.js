@@ -46,16 +46,16 @@ function App() {
           <h1 className="logo">BitLife Clone</h1>
           <Nav onClick={addYear} />
         </header>
+        {useMemo(
+                () => (
+                <Offline offline={offline} setOffline={setOffline} />
+                ),
+                [offline]
+            )}
         {!character.newCharacter ? (
           <CharacterSummary character={character} />
         ) : null}
       </div>
-      {useMemo(
-        () => (
-          <Offline offline={offline} setOffline={setOffline} />
-        ),
-        [offline]
-      )}
       <main className="u-container">
         <Router>
           <Homepage

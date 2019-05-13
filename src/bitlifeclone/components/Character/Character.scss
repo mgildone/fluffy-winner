@@ -23,15 +23,6 @@
 }
 
 .c-character {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(get-rgb($primary--dark), 0.5);
-  padding-left: get-spacing("xl");
-  margin: get-spacing(0);
-  z-index: 11;
   dt {
     font-family: "Pacifico", cursive;
     font-weight: 400;

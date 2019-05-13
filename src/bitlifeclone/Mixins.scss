@@ -50,3 +50,39 @@
 @mixin u-text-weight($weight) {
     font-weight: $weight;
 }
+
+/**
+ * Default link style
+ *
+ */
+
+/**
+ * Unvisited
+ *
+ */
+
+@mixin unvisited {
+    &.visited,
+    &:visited {
+        color: color('action');
+    }
+
+    &.hover,
+    &:hover {
+        color: color('action', 'light');
+    }
+}
+
+@mixin inherited {
+    color: inherit;
+
+    &.visited,
+    &:visited {
+        color: inherit;
+    }
+
+    &.hover,
+    &:hover {
+        color: inherit;
+    }
+}

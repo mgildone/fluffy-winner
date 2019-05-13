@@ -46,6 +46,11 @@ h3 {
   );
 }
 
+a {
+    @include inherited;
+    @include unvisited;
+}
+
 .logo {
   @include fluid-type($min_width, $max_width, $max_font, $max_font);
   margin: 0;

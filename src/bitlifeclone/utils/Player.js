@@ -1,4 +1,4 @@
-import { pick, randomScore } from "./common";
+import { pick, randomScore, generateChances } from "./common";
 
 const validate = (data) => {
     const mandatoryKeys = [
@@ -14,6 +14,28 @@ const validate = (data) => {
   }, []);
 };
 
+const getBullied = (vals) => {
+    const chance = Object.keys(vals).reduce((acc, next) => {
+        if(next === "smarts") {
+            return acc + vals[next];
+        }
+         return   acc + (100 - vals[next]);
+    }, 0)
+
+    const bullied = (chance / 400) * 100;
+    console.log(chance);
+
+    return generateChances([{
+        "name": "bullied",
+        "pct": parseInt(bullied, 10),
+        "value": true
+        }, {
+        "name": "no-bullied",
+        "pct": parseInt((100 - bullied), 10),
+        "value": false
+    }]);
+}
+
 const Player = (data = {}) => {
   const errors = validate(data);
   if (errors.length) {
@@ -28,10 +50,15 @@ const Player = (data = {}) => {
     data["firstNames"][gender.abbreviation][nationality.abbreviation]
   );
   const lastName = pick(data["lastNames"][nationality.abbreviation]);
+  const happiness = randomScore(1, 100);
+  const health = randomScore(1, 100);
+  const smarts = randomScore(1, 100);
+  const looks = randomScore(1, 100);
 
   return {
     newCharacter: true,
     age: 0,
+    dearhAge: randomScore(1, 120),
     lifePhase: "infant",
     nationality,
     country,
@@ -39,10 +66,14 @@ const Player = (data = {}) => {
     sexualOrientation,
     firstName,
     lastName,
-    happiness: randomScore(1, 100),
-    health: randomScore(1, 100),
-    smarts: randomScore(1, 100),
-    looks: randomScore(1, 100)
+    happiness,
+    health,
+    smarts,
+    looks,
+    bullied: getBullied({happiness,
+    health,
+    smarts,
+    looks})
   };
 };
 
