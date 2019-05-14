@@ -14,30 +14,6 @@ const validate = data => {
   }, []);
 };
 
-const getBullied = vals => {
-  const chance = Object.keys(vals).reduce((acc, next) => {
-    if (next === "smarts") {
-      return acc + vals[next];
-    }
-    return acc + (100 - vals[next]);
-  }, 0);
-
-  const bullied = (chance / 400) * 100;
-
-  return generateChances([
-    {
-      name: "bullied",
-      pct: parseInt(bullied, 10),
-      value: true
-    },
-    {
-      name: "no-bullied",
-      pct: parseInt(100 - bullied, 10),
-      value: false
-    }
-  ]);
-};
-
 const Player = (data = {}) => {
   const errors = validate(data);
   if (errors.length) {
@@ -60,8 +36,7 @@ const Player = (data = {}) => {
   return {
     newCharacter: true,
     age: 0,
-    dearhAge: randomScore(1, 120),
-    lifePhase: "infant",
+    deathAge: randomScore(1, 80),
     nationality,
     country,
     gender,
@@ -71,8 +46,7 @@ const Player = (data = {}) => {
     happiness,
     health,
     smarts,
-    looks,
-    bullied: getBullied({ happiness, health, smarts, looks })
+    looks
   };
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "./App.scss";
 import { GeneratePlayer } from "./utils/generatePlayer";
-import { generateFirstYear, generateYear } from "./utils/generateYear";
+import { generateLife } from "./utils/generateYear";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
@@ -18,19 +18,14 @@ library.add(far, fas);
 
 function App() {
   const [character, setCharacter] = useState(GeneratePlayer());
-  const [years, setYear] = useState([
-    generateFirstYear(
-      character.firstName,
-      character.lastName,
-      character.country
-    )
-  ]);
+  const life = generateLife(character);
+  const [years, setYear] = useState([life[0]]);
 
   const [offline, setOffline] = useState(!navigator.onLine);
   const addYear = () => {
     const age = character.age + 1;
     setCharacter(Object.assign({}, character, { age }));
-    setYear(generateYear(years, character));
+    setYear([...years, life[age]]);
   };
 
   useEffect(() => {
