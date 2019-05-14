@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "./App.scss";
 import { GeneratePlayer } from "./utils/generatePlayer";
-import { pickChances } from "./utils/common";
+import { generateFirstYear, generateYear } from "./utils/generateYear";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
@@ -17,20 +17,20 @@ import { Profile } from "./pages/Profile";
 library.add(far, fas);
 
 function App() {
-  const [years, setYear] = useState([]);
   const [character, setCharacter] = useState(GeneratePlayer());
+  const [years, setYear] = useState([
+    generateFirstYear(
+      character.firstName,
+      character.lastName,
+      character.country
+    )
+  ]);
+
   const [offline, setOffline] = useState(!navigator.onLine);
   const addYear = () => {
-    const bullyEvent = () => {
-      const bullied = pickChances(character.bullied).value;
-      if (bullied) {
-        return "You've been bullied!";
-      }
-      return "You've not been bullied!";
-    };
     const age = character.age + 1;
     setCharacter(Object.assign({}, character, { age }));
-    setYear([...years, Object.assign({}, { age, events: [bullyEvent()] })]);
+    setYear(generateYear(years, character));
   };
 
   useEffect(() => {
@@ -46,6 +46,7 @@ function App() {
 
   useEffect(() => {
     console.log(JSON.stringify(character, null, 2));
+    console.log(JSON.stringify(years, null, 2));
   });
 
   return (

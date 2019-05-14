@@ -39,14 +39,6 @@ const CharacterModal = props => {
               <button className="c-bnt" type="button" onClick={startGame}>
                 Play!
               </button>
-              <hr />
-              <button
-                className="c-bnt c-bnt--negative"
-                type="button"
-                onClick={startGame}
-              >
-                I want to reborn!
-              </button>
             </div>
           </div>
         ),
