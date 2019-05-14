@@ -86,7 +86,10 @@ const generateLife = character => {
       );
     } else {
       life.push(
-        Object.assign({}, { age: i, events: [bulliedChanche(), worldEvents()] })
+        Object.assign(
+          {},
+          { age: i, events: [...bulliedChanche(), ...worldEvents()] }
+        )
       );
     }
   }
