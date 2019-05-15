@@ -49,7 +49,9 @@ function App() {
       <div className="app-header">
         <header>
           <h1 className="logo">BitLife Clone</h1>
-          <Nav onClick={addYear} />
+          {character.age < character.deathAge ? (
+            <Nav onClick={addYear} />
+          ) : null}
         </header>
         {useMemo(
           () => (

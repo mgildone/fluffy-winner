@@ -95,8 +95,18 @@ const generateLife = character => {
   }
 
   life.push(
-    milestones[`age-death`](
-      Object.assign({}, character, { age: character.deathAge })
+    Object.assign(
+      {},
+      {
+        age: character.deathAge,
+        events: [
+          ...milestones[`age-death`](
+            Object.assign({}, character, { age: character.deathAge })
+          ),
+          ...bulliedChanche(),
+          ...worldEvents()
+        ]
+      }
     )
   );
 
