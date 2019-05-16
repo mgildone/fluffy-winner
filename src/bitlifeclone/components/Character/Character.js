@@ -14,7 +14,6 @@ const CharacterList = props => {
 };
 
 const Character = props => {
-  console.log(JSON.stringify(props.character, null, 2));
   return (
     <CharacterContainer>
       <CharacterList>

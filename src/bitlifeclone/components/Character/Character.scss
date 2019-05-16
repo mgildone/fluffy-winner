@@ -23,6 +23,7 @@
 }
 
 .c-character {
+  margin-top: get-spacing("huge");
   dt {
     font-family: "Pacifico", cursive;
     font-weight: 400;
@@ -36,7 +37,6 @@
 
 .c-character__list {
   background-color: var(--primary--light);
-  padding: get-spacing("sm");
   margin: get-spacing(0);
   height: 100%;
 }
