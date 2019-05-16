@@ -6,7 +6,6 @@ import { generateLife } from "./utils/generateYear";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { Nav } from "./components/Nav/Nav";
 import { CharacterSummary } from "./components/Character/CharacterSummary";
 import { Offline } from "./components/Offline/Offline";
 import { Router } from "@reach/router";
@@ -49,9 +48,6 @@ function App() {
       <div className="app-header">
         <header>
           <h1 className="logo">BitLife Clone</h1>
-          {character.age < character.deathAge ? (
-            <Nav onClick={addYear} />
-          ) : null}
         </header>
         {useMemo(
           () => (
@@ -70,7 +66,7 @@ function App() {
             setCharacter={setCharacter}
             character={character}
           />
-          <Progress path="/progress" years={years} />
+          <Progress path="/progress" character={character} addYear={addYear} years={years} />
           <Profile
             path="/profile"
             setCharacter={setCharacter}
